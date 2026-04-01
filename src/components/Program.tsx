@@ -34,7 +34,7 @@ const Program = () => {
           <p className="text-sm tracking-[0.3em] uppercase text-primary mb-4">
             Programa de Mentoría
           </p>
-          <h2 className="font-serif text-3xl md:text-5xl mb-6 leading-tight">
+          <h2 className="font-heading text-3xl md:text-5xl mb-6 leading-tight">
             Construido sobre evidencia, no sobre opinión.
           </h2>
           <p className="text-muted-foreground leading-relaxed text-lg">
@@ -52,7 +52,7 @@ const Program = () => {
                 {pillar.number}
               </span>
               <div>
-                <h3 className="font-serif text-xl md:text-2xl mb-2 group-hover:text-primary transition-colors">
+                <h3 className="font-heading text-xl md:text-2xl mb-2 group-hover:text-primary transition-colors">
                   {pillar.title}
                 </h3>
                 <p className="text-muted-foreground max-w-lg">

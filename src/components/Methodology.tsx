@@ -7,7 +7,7 @@ const Methodology = () => {
             <p className="text-sm tracking-[0.3em] uppercase text-primary mb-4">
               Metodología
             </p>
-            <h2 className="font-serif text-3xl md:text-4xl leading-tight mb-6">
+            <h2 className="font-heading text-3xl md:text-4xl leading-tight mb-6">
               El modelo
               <br />
               <span className="text-gradient-brand">70 · 20 · 10</span>
@@ -41,7 +41,7 @@ const Methodology = () => {
               },
             ].map((item) => (
               <div key={item.pct} className="flex gap-6 items-start p-6 bg-card border border-border">
-                <span className="font-serif text-3xl text-primary shrink-0">
+                <span className="font-heading text-3xl text-primary shrink-0">
                   {item.pct}
                 </span>
                 <div>
