@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        serif: ['"DM Serif Display"', 'serif'],
+        heading: ['"Outfit"', 'sans-serif'],
         sans: ['"DM Sans"', 'sans-serif'],
       },
       colors: {

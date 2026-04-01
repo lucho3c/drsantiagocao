@@ -12,7 +12,7 @@ const Stats = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat) => (
             <div key={stat.label} className="text-center">
-              <div className="font-serif text-5xl md:text-6xl text-primary mb-2">
+              <div className="font-heading text-5xl md:text-6xl text-primary mb-2">
                 {stat.number}
               </div>
               <div className="text-sm tracking-[0.2em] uppercase text-muted-foreground">

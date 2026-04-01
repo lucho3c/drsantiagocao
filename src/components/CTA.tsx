@@ -5,7 +5,7 @@ const CTA = () => {
         <p className="text-sm tracking-[0.3em] uppercase text-primary mb-4">
           Admisión
         </p>
-        <h2 className="font-serif text-3xl md:text-5xl mb-6 leading-tight">
+        <h2 className="font-heading text-3xl md:text-5xl mb-6 leading-tight">
           ¿Es este programa para vos?
         </h2>
         <p className="text-muted-foreground leading-relaxed text-lg mb-4">
