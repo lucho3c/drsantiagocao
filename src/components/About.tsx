@@ -25,7 +25,7 @@ const About = () => {
             <p className="text-sm tracking-[0.3em] uppercase text-primary mb-4">
               Presentación
             </p>
-            <h2 className="font-serif text-3xl md:text-4xl mb-8 leading-tight">
+            <h2 className="font-heading text-3xl md:text-4xl mb-8 leading-tight">
               María Belén
               <br />
               Benegas

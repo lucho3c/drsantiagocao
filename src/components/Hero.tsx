@@ -21,7 +21,7 @@ const Hero = () => {
           Belén Benegas · Consultoría
         </p>
 
-        <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl leading-[1.1] mb-8 opacity-0 animate-fade-up">
+        <h1 className="font-heading text-4xl sm:text-5xl md:text-7xl leading-[1.1] mb-8 opacity-0 animate-fade-up">
           De emprendedor a sistema
           <br />
           <span className="text-gradient-brand">que opera sin vos</span>
