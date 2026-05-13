@@ -1,9 +1,9 @@
 # Project Memory
 
 ## Core
-Dark editorial brand. BG #0f1114, blue accent #9AB8DD. Outfit (headings, 600wt) + DM Sans (body). Spanish language site.
-Brand: Belén Benegas Consultoría - mentoría para emprendedores.
-Real photo of Belén used. Logo image at src/assets/logo.jpg.
+Premium medical site for Dr. Santiago Cao (traumatólogo, Argentina). Spanish (vos forms).
+Palette: navy #1A2B45 base, ivory #F5F1E8 bg, gold/amber #C99A4A accent. NO hospital blue.
+Fonts: Cormorant Garamond (serif headings) + DM Sans (body). Editorial luxury aesthetic.
+WhatsApp placeholder number: 5491100000000 — replace with real.
 
 ## Memories
-- [Brand identity](mem://design/brand) — Colors, fonts, tone for BeluBenegas
