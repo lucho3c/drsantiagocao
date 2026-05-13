@@ -1,13 +1,37 @@
-import logo from "@/assets/logo.png";
-
 const Footer = () => {
   return (
-    <footer className="py-12 border-t border-border">
-      <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-        <img src={logo} alt="BeluBenegas" className="h-7 brightness-[10]" />
-        <p className="text-sm text-muted-foreground">
-          Lic. en Administración · Contadora Pública · Metodología VPO/DPO (AB InBev) · HOGAN Assessments
-        </p>
+    <footer className="bg-navy-deep text-ivory/70 py-16 grain relative">
+      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+        <div>
+          <p className="font-serif text-2xl text-ivory">
+            <span className="text-gold">Dr.</span> Santiago Cao
+          </p>
+          <p className="mt-3 text-sm text-ivory/55">Traumatología y Cirugía Ortopédica</p>
+          <p className="text-sm text-ivory/55">MN 000.000</p>
+        </div>
+        <div className="text-sm space-y-2">
+          <p className="text-[10px] tracking-[0.3em] uppercase text-gold mb-3">Navegación</p>
+          {[
+            ["Sobre el Dr.", "#sobre"],
+            ["Especialidades", "#especialidades"],
+            ["Patologías", "#patologias"],
+            ["Contacto", "#contacto"],
+          ].map(([l, h]) => (
+            <a key={h} href={h} className="block hover:text-gold transition-colors">{l}</a>
+          ))}
+        </div>
+        <div className="text-sm space-y-2">
+          <p className="text-[10px] tracking-[0.3em] uppercase text-gold mb-3">Contacto</p>
+          <p>Buenos Aires, Argentina</p>
+          <p>contacto@drsantiagocao.com</p>
+          <a href="https://www.instagram.com/dr.santiagocao/" target="_blank" rel="noreferrer" className="block hover:text-gold transition-colors">
+            @dr.santiagocao
+          </a>
+        </div>
+      </div>
+      <div className="max-w-7xl mx-auto px-6 mt-14 pt-8 border-t border-ivory/10 text-xs text-ivory/40 flex flex-col md:flex-row justify-between gap-4">
+        <p>© {new Date().getFullYear()} Dr. Santiago Cao. Todos los derechos reservados.</p>
+        <p>Información de carácter informativo. No reemplaza la consulta médica.</p>
       </div>
     </footer>
   );
