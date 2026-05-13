@@ -1,22 +1,29 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Stats from "@/components/Stats";
 import About from "@/components/About";
-import Program from "@/components/Program";
-import Methodology from "@/components/Methodology";
-import CTA from "@/components/CTA";
+import Specialties from "@/components/Specialties";
+import WhyMe from "@/components/WhyMe";
+import Conditions from "@/components/Conditions";
+import Testimonials from "@/components/Testimonials";
+import Instagram from "@/components/Instagram";
+import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import WhatsAppFab from "@/components/WhatsAppFab";
 
 const Index = () => {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-ivory">
       <Header />
-      <Stats />
+      <Hero />
       <About />
-      <Program />
-      <Methodology />
-      <CTA />
+      <Specialties />
+      <WhyMe />
+      <Conditions />
+      <Testimonials />
+      <Instagram />
+      <Contact />
       <Footer />
+      <WhatsAppFab />
     </main>
   );
 };
