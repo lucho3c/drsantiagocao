@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo-osc.jpg";
+import logo from "@/assets/logo-osc.png";
 
 const links = [
   { label: "Sobre el Dr.", href: "#sobre" },

@@ -1,4 +1,4 @@
-import logo from "@/assets/logo-osc.jpg";
+import logo from "@/assets/logo-osc.png";
 
 const Footer = () => {
   return (
