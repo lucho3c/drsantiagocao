@@ -8,9 +8,9 @@ export default {
     container: { center: true, padding: "1.5rem", screens: { "2xl": "1320px" } },
     extend: {
       fontFamily: {
-        serif: ['"Cormorant Garamond"', 'serif'],
+        serif: ['"Mulish"', 'sans-serif'],
         sans: ['"DM Sans"', 'sans-serif'],
-        heading: ['"Cormorant Garamond"', 'serif'],
+        heading: ['"Mulish"', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
