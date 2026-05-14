@@ -1,5 +1,5 @@
 import heroImg from "@/assets/hero-anatomy.jpg";
-import areasImg from "@/assets/areas-infographic.jpg";
+import areasImg from "@/assets/hip-knee-xray.jpg";
 
 const Hero = () => {
   return (
@@ -46,27 +46,15 @@ const Hero = () => {
         </div>
 
         <div className="hidden lg:block lg:col-span-5">
-          <div className="relative">
-            <div className="absolute -inset-4 border border-gold/30" />
-            <div className="relative aspect-[4/5] bg-navy/40 backdrop-blur-sm border border-ivory/10 overflow-hidden">
-              <img
-                src={areasImg}
-                alt="Áreas de práctica: cadera y rodilla"
-                className="absolute inset-0 w-full h-full object-cover"
-                loading="lazy"
-                width={1024}
-                height={1280}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/90 via-navy-deep/20 to-transparent" />
-              <div className="absolute top-0 left-0 p-8">
-                <p className="text-gold text-[10px] tracking-[0.4em] uppercase">Áreas de práctica</p>
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 p-8 flex items-end justify-between">
-                <p className="font-serif text-2xl text-ivory leading-tight">Cadera<br/><span className="text-ivory/60">&</span><br/>Rodilla</p>
-                <p className="text-ivory/60 text-[10px] tracking-[0.25em] uppercase text-right">Buenos Aires<br/>Argentina</p>
-              </div>
-            </div>
-          </div>
+          <img
+            src={areasImg}
+            alt="Áreas de práctica del Dr. Santiago Cao: cadera y rodilla"
+            className="w-full h-auto object-contain max-h-[80vh] mx-auto drop-shadow-[0_20px_60px_rgba(0,0,0,0.6)] opacity-0 animate-fade-up"
+            style={{ animationDelay: "0.4s" }}
+            loading="lazy"
+            width={1024}
+            height={1024}
+          />
         </div>
       </div>
 
