@@ -1,13 +1,13 @@
 import { Reveal } from "./Reveal";
 import { Instagram as IgIcon } from "lucide-react";
 
-const tiles = [
-  "Tres mitos sobre el dolor de cadera",
-  "¿Cuándo operar un menisco?",
-  "Qué es realmente la artrosis",
-  "PRP: para quién sí, para quién no",
-  "Vuelta al deporte post artroscopia",
-  "Cómo elegir tu traumatólogo",
+const reels = [
+  "https://www.instagram.com/p/DXrinlJj_nT/",
+  "https://www.instagram.com/p/DXcfqSGD8Vn/",
+  "https://www.instagram.com/p/DX-K1grvrlH/",
+  "https://www.instagram.com/p/DXxRfOlvwra/",
+  "https://www.instagram.com/p/DYHs08GPl_F/",
+  "https://www.instagram.com/p/DJt_tpHtXZM/",
 ];
 
 const Instagram = () => {
@@ -37,26 +37,20 @@ const Instagram = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-          {tiles.map((t, i) => (
-            <Reveal key={t} delay={i * 60}>
-              <a
-                href="https://www.instagram.com/dr.santiagocao/"
-                target="_blank"
-                rel="noreferrer"
-                className="group relative aspect-square block overflow-hidden bg-navy border border-ivory/10 hover:border-gold/60 transition-colors"
-              >
-                <div
-                  className="absolute inset-0 opacity-30 group-hover:opacity-50 transition-opacity"
-                  style={{
-                    background: `radial-gradient(circle at ${20 + i * 12}% ${30 + i * 8}%, hsl(36 55% 52% / 0.6), transparent 60%)`,
-                  }}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {reels.map((url, i) => (
+            <Reveal key={url} delay={i * 60}>
+              <div className="relative w-full overflow-hidden bg-navy border border-ivory/10 hover:border-gold/60 transition-colors" style={{ aspectRatio: "9 / 16" }}>
+                <iframe
+                  src={`${url}embed`}
+                  title={`Reel ${i + 1}`}
+                  loading="lazy"
+                  allow="encrypted-media"
+                  className="absolute inset-0 w-full h-full"
+                  frameBorder={0}
+                  scrolling="no"
                 />
-                <div className="relative h-full p-4 flex flex-col justify-between">
-                  <IgIcon className="text-ivory/50 group-hover:text-gold transition-colors" size={16} strokeWidth={1.5} />
-                  <p className="font-serif text-sm md:text-base text-ivory leading-tight">{t}</p>
-                </div>
-              </a>
+              </div>
             </Reveal>
           ))}
         </div>
