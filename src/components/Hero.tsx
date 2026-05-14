@@ -1,4 +1,5 @@
 import heroImg from "@/assets/hero-anatomy.jpg";
+import areasImg from "@/assets/areas-infographic.jpg";
 
 const Hero = () => {
   return (
@@ -47,18 +48,22 @@ const Hero = () => {
         <div className="hidden lg:block lg:col-span-5">
           <div className="relative">
             <div className="absolute -inset-4 border border-gold/30" />
-            <div className="relative aspect-[4/5] bg-navy/40 backdrop-blur-sm border border-ivory/10 p-10 flex flex-col justify-between">
-              <div>
+            <div className="relative aspect-[4/5] bg-navy/40 backdrop-blur-sm border border-ivory/10 overflow-hidden">
+              <img
+                src={areasImg}
+                alt="Áreas de práctica: cadera y rodilla"
+                className="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+                width={1024}
+                height={1280}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/90 via-navy-deep/20 to-transparent" />
+              <div className="absolute top-0 left-0 p-8">
                 <p className="text-gold text-[10px] tracking-[0.4em] uppercase">Áreas de práctica</p>
-                <ul className="mt-8 space-y-4 font-serif text-2xl text-ivory">
-                  <li>Cadera</li>
-                  <li className="text-ivory/50">·</li>
-                  <li>Rodilla</li>
-                </ul>
               </div>
-              <div className="text-ivory/60 text-xs tracking-wide">
-                <p>Buenos Aires · Argentina</p>
-                <p className="mt-1">Atención presencial y a distancia</p>
+              <div className="absolute bottom-0 left-0 right-0 p-8 flex items-end justify-between">
+                <p className="font-serif text-2xl text-ivory leading-tight">Cadera<br/><span className="text-ivory/60">&</span><br/>Rodilla</p>
+                <p className="text-ivory/60 text-[10px] tracking-[0.25em] uppercase text-right">Buenos Aires<br/>Argentina</p>
               </div>
             </div>
           </div>
