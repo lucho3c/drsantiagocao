@@ -1,11 +1,16 @@
+import logo from "@/assets/logo-osc.jpg";
+
 const Footer = () => {
   return (
     <footer className="bg-navy-deep text-ivory/70 py-16 grain relative">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
         <div>
-          <p className="font-serif text-2xl text-ivory">
-            <span className="text-gold">Dr.</span> Santiago Cao
-          </p>
+          <div className="flex items-center gap-3">
+            <img src={logo} alt="Dr. Santiago Cao" className="h-12 w-12 object-contain" />
+            <p className="font-heading font-black text-xl text-ivory leading-tight">
+              Dr. Santiago <span className="text-gold-light">Cao</span>
+            </p>
+          </div>
           <p className="mt-3 text-sm text-ivory/55">Traumatología y Cirugía Ortopédica</p>
           <p className="text-sm text-ivory/55">MN 000.000</p>
         </div>

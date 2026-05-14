@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo-osc.jpg";
 
 const links = [
   { label: "Sobre el Dr.", href: "#sobre" },
@@ -28,8 +29,11 @@ const Header = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <a href="#" className="font-serif text-xl tracking-tight text-navy">
-          <span className="text-gold">Dr.</span> Santiago Cao
+        <a href="#" className="flex items-center gap-3">
+          <img src={logo} alt="Dr. Santiago Cao" className="h-10 w-10 object-contain rounded-sm" />
+          <span className="font-heading font-black text-base tracking-tight text-navy hidden sm:inline">
+            Dr. Santiago <span className="text-gold">Cao</span>
+          </span>
         </a>
 
         <nav className="hidden lg:flex items-center gap-9">
