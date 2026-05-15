@@ -5,9 +5,6 @@ const reels = [
   "https://www.instagram.com/p/DXrinlJj_nT/",
   "https://www.instagram.com/p/DXcfqSGD8Vn/",
   "https://www.instagram.com/p/DX-K1grvrlH/",
-  "https://www.instagram.com/p/DXxRfOlvwra/",
-  "https://www.instagram.com/p/DYHs08GPl_F/",
-  "https://www.instagram.com/p/DJt_tpHtXZM/",
 ];
 
 const Instagram = () => {
@@ -45,23 +42,29 @@ const Instagram = () => {
                 target="_blank"
                 rel="noreferrer"
                 aria-label={`Ver reel ${i + 1} en Instagram`}
-                className="group relative block w-full overflow-hidden bg-navy border border-ivory/10 hover:border-gold/60 transition-colors"
+                className="group relative block w-full overflow-hidden border border-ivory/10 hover:border-gold/60 transition-colors"
                 style={{ aspectRatio: "9 / 16" }}
               >
-                <img
-                  src={`${url}media/?size=l`}
-                  alt={`Reel ${i + 1} del Dr. Santiago Cao`}
-                  loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).style.display = "none";
+                <div
+                  className="absolute inset-0 transition-transform duration-700 group-hover:scale-105"
+                  style={{
+                    background:
+                      "radial-gradient(circle at 30% 20%, hsl(var(--gold) / 0.35), transparent 55%), radial-gradient(circle at 70% 80%, hsl(var(--navy) / 0.9), transparent 60%), linear-gradient(135deg, hsl(var(--navy-deep)), hsl(var(--navy)))",
                   }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/70 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-[radial-gradient(hsl(var(--ivory)/0.06)_1px,transparent_1px)] [background-size:14px_14px]" />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-transparent to-transparent" />
+                <div className="absolute top-5 left-5 flex items-center gap-2 text-ivory/80">
+                  <IgIcon size={16} strokeWidth={1.5} />
+                  <span className="text-[10px] tracking-[0.3em] uppercase">Reel</span>
+                </div>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <span className="flex items-center justify-center w-16 h-16 rounded-full bg-gold/95 text-navy-deep shadow-luxury group-hover:scale-110 transition-transform">
                     <Play size={26} strokeWidth={2} fill="currentColor" className="ml-1" />
                   </span>
+                </div>
+                <div className="absolute bottom-5 left-5 right-5 text-ivory/85 text-xs tracking-wide">
+                  Ver en Instagram →
                 </div>
               </a>
             </Reveal>
