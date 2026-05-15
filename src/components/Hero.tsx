@@ -1,5 +1,5 @@
 import heroImg from "@/assets/hero-anatomy.jpg";
-import areasImg from "@/assets/hip-knee-xray.jpg";
+import areasImg from "@/assets/doctor-portrait.jpg";
 
 const Hero = () => {
   return (
