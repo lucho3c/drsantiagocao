@@ -69,14 +69,14 @@ const Contact = () => {
                 <Mail className="text-gold mt-1 shrink-0" size={18} strokeWidth={1.5} />
                 <div>
                   <p className="text-foreground/55 text-xs tracking-wide uppercase">Email</p>
-                  <p className="text-navy mt-1">contacto@drsantiagocao.com</p>
+                  <p className="text-navy mt-1">consulta@drsantiagocao.com.ar</p>
                 </div>
               </div>
               <div className="flex items-start gap-4 text-sm">
                 <Phone className="text-gold mt-1 shrink-0" size={18} strokeWidth={1.5} />
                 <div>
                   <p className="text-foreground/55 text-xs tracking-wide uppercase">Teléfono</p>
-                  <p className="text-navy mt-1">+54 9 11 0000-0000</p>
+                  <p className="text-navy mt-1">+54 9 11 4059 1453</p>
                 </div>
               </div>
             </div>

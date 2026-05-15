@@ -28,7 +28,7 @@ const Footer = () => {
         <div className="text-sm space-y-2">
           <p className="text-[10px] tracking-[0.3em] uppercase text-gold mb-3">Contacto</p>
           <p>Buenos Aires, Argentina</p>
-          <p>contacto@drsantiagocao.com</p>
+          <p>consulta@drsantiagocao.com.ar</p>
           <a href="https://www.instagram.com/dr.santiagocao/" target="_blank" rel="noreferrer" className="block hover:text-gold transition-colors">
             @dr.santiagocao
           </a>
