@@ -1,5 +1,5 @@
 import { Reveal } from "./Reveal";
-import { Activity, Bone, Droplet } from "lucide-react";
+import { Activity, Bone, Droplet, Video } from "lucide-react";
 
 const items = [
   {
@@ -10,12 +10,17 @@ const items = [
   {
     icon: Activity,
     title: "Artroscopia de rodilla",
-    desc: "Reparación de meniscos, ligamentos y cartílago a través de pequeñas incisiones, con recuperación más rápida.",
+    desc: "Reparación de meñiscos, ligamentos y cartílago a través de pequeñas incisiones, con recuperación más rápida.",
   },
   {
     icon: Droplet,
     title: "Terapias biológicas",
     desc: "PRP, ácido hialurónico, terapias con células mesenquimales. Para estimular la regeneración natural de tejidos y aliviar el dolor articular.",
+  },
+  {
+    icon: Video,
+    title: "Teleconsulta",
+    desc: "Atención online para pacientes del interior o el exterior. Revisamos estudios, evacuamos dudas y definimos los próximos pasos sin que tengas que moverte.",
   },
 ];
 

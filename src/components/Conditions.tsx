@@ -14,7 +14,7 @@ const groups = [
   {
     area: "Rodilla",
     items: [
-      { name: "Lesión de menisco", desc: "Dolor, bloqueo o sensación de inestabilidad. La mayoría se resuelve por artroscopia." },
+      { name: "Lesión de meñisco", desc: "Dolor, bloqueo o sensación de inestabilidad. La mayoría se resuelve por artroscopia." },
       { name: "Condromalacia rotuliana", desc: "Dolor anterior de rodilla, sobre todo al subir escaleras o estar mucho tiempo sentado." },
       { name: "Lesiones de ligamentos (LCA / LCM)", desc: "Inestabilidad después de un esguince o lesión deportiva. Tratamientos personalizados según el caso." },
       { name: "Tendinopatías (rotuliana, cuadricipital)", desc: "Dolor crónico por sobrecarga en deportistas y personas activas." },

@@ -15,7 +15,7 @@ const items = [
   {
     quote: "Es de esos médicos que te escucha y te contesta los mensajes. Sentí confianza desde la primera consulta.",
     name: "Florencia P.",
-    detail: "Lesión de menisco",
+    detail: "Lesión de meñisco",
   },
 ];
 
