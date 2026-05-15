@@ -31,7 +31,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <a href="#" className="flex items-center gap-3">
           <img src={logo} alt="Dr. Santiago Cao" className="h-10 w-10 object-contain rounded-sm" />
-          <span className="font-heading font-black text-base tracking-tight text-navy hidden sm:inline">
+          <span className={`font-heading font-black text-base tracking-tight hidden sm:inline transition-colors ${scrolled ? "text-navy" : "text-ivory"}`}>
             Dr. Santiago <span className="text-gold">Cao</span>
           </span>
         </a>

@@ -1,5 +1,5 @@
 import { Reveal } from "./Reveal";
-import { Instagram as IgIcon } from "lucide-react";
+import { Instagram as IgIcon, Play } from "lucide-react";
 
 const reels = [
   "https://www.instagram.com/p/DXrinlJj_nT/",
@@ -40,17 +40,30 @@ const Instagram = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {reels.map((url, i) => (
             <Reveal key={url} delay={i * 60}>
-              <div className="relative w-full overflow-hidden bg-navy border border-ivory/10 hover:border-gold/60 transition-colors" style={{ aspectRatio: "9 / 16" }}>
-                <iframe
-                  src={`${url}embed`}
-                  title={`Reel ${i + 1}`}
+              <a
+                href={url}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Ver reel ${i + 1} en Instagram`}
+                className="group relative block w-full overflow-hidden bg-navy border border-ivory/10 hover:border-gold/60 transition-colors"
+                style={{ aspectRatio: "9 / 16" }}
+              >
+                <img
+                  src={`${url}media/?size=l`}
+                  alt={`Reel ${i + 1} del Dr. Santiago Cao`}
                   loading="lazy"
-                  allow="encrypted-media"
-                  className="absolute inset-0 w-full h-full"
-                  frameBorder={0}
-                  scrolling="no"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  onError={(e) => {
+                    (e.currentTarget as HTMLImageElement).style.display = "none";
+                  }}
                 />
-              </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/70 via-transparent to-transparent" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="flex items-center justify-center w-16 h-16 rounded-full bg-gold/95 text-navy-deep shadow-luxury group-hover:scale-110 transition-transform">
+                    <Play size={26} strokeWidth={2} fill="currentColor" className="ml-1" />
+                  </span>
+                </div>
+              </a>
             </Reveal>
           ))}
         </div>
