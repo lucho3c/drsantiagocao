@@ -12,7 +12,7 @@ const Footer = () => {
             </p>
           </div>
           <p className="mt-3 text-sm text-ivory/55">Traumatología y Cirugía Ortopédica</p>
-          <p className="text-sm text-ivory/55">MN 000.000</p>
+          <p className="text-sm text-ivory/55">MN 158.214</p>
         </div>
         <div className="text-sm space-y-2">
           <p className="text-[10px] tracking-[0.3em] uppercase text-gold mb-3">Navegación</p>

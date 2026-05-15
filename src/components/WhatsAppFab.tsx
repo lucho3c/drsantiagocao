@@ -1,16 +1,16 @@
-import { MessageCircle } from "lucide-react";
-
 const WhatsAppFab = () => (
   <a
-    href="https://wa.me/5491100000000"
+    href="https://web.whatsapp.com/5491140591453"
     target="_blank"
     rel="noreferrer"
     aria-label="Contactar por WhatsApp"
     className="fixed bottom-6 right-6 z-40 group"
   >
     <span className="absolute inset-0 rounded-full bg-gold/40 animate-ping" />
-    <span className="relative flex items-center justify-center w-14 h-14 rounded-full bg-gold text-navy-deep shadow-luxury hover:bg-gold-light transition-colors">
-      <MessageCircle size={24} strokeWidth={1.8} />
+    <span className="relative flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-luxury hover:bg-[#1ebe5a] transition-colors">
+      <svg viewBox="0 0 32 32" width="26" height="26" fill="currentColor" aria-hidden="true">
+        <path d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.888 2.722.888.345 0 1.318-.13 1.59-.34.327-.246.51-.926.51-1.318 0-.094 0-.183-.027-.27-.067-.222-1.286-.776-1.59-.92zm-2.99 7.755a8.94 8.94 0 0 1-4.566-1.246l-3.27.86.872-3.214a8.927 8.927 0 0 1-1.376-4.78c0-4.943 4.022-8.965 8.965-8.965 2.4 0 4.654.93 6.348 2.624a8.928 8.928 0 0 1 2.616 6.346c0 4.943-4.022 8.966-8.965 8.966zm0-19.726c-5.943 0-10.76 4.817-10.76 10.76 0 1.898.495 3.756 1.437 5.394L5 27.395l5.13-1.346a10.74 10.74 0 0 0 5.143 1.31h.005c5.94 0 10.835-4.815 10.835-10.758 0-2.875-1.187-5.577-3.22-7.612a10.692 10.692 0 0 0-7.617-3.155z"/>
+      </svg>
     </span>
   </a>
 );

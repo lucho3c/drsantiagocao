@@ -1,5 +1,5 @@
 import { Reveal } from "./Reveal";
-import { Activity, Bone, Droplet, Syringe } from "lucide-react";
+import { Activity, Bone, Droplet } from "lucide-react";
 
 const items = [
   {
@@ -14,13 +14,8 @@ const items = [
   },
   {
     icon: Droplet,
-    title: "Tratamientos regenerativos (PRP)",
-    desc: "Plasma rico en plaquetas para estimular la regeneración natural de tejidos y aliviar el dolor articular.",
-  },
-  {
-    icon: Syringe,
-    title: "Bloqueos analgésicos (PENG block)",
-    desc: "Técnica precisa para controlar el dolor de cadera sin recurrir a cirugía, ideal en pacientes seleccionados.",
+    title: "Terapias biológicas",
+    desc: "PRP, ácido hialurónico, terapias con células mesenquimales. Para estimular la regeneración natural de tejidos y aliviar el dolor articular.",
   },
 ];
 

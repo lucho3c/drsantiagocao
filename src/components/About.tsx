@@ -1,4 +1,4 @@
-import doctorImg from "@/assets/doctor-portrait.jpg";
+import doctorImg from "@/assets/hip-knee-xray.jpg";
 import { Reveal } from "./Reveal";
 
 const About = () => {
@@ -29,13 +29,13 @@ const About = () => {
           <Reveal>
             <p className="text-gold text-[11px] tracking-[0.4em] uppercase mb-6">Sobre el Dr. Cao</p>
             <h2 className="font-serif text-4xl md:text-6xl text-navy leading-[1.05] text-balance">
-              Joven, formado y obsesionado con <em className="text-gold">no operar de más</em>.
+              Obsesionado con <em className="text-gold">no operar de más</em>.
             </h2>
           </Reveal>
           <Reveal delay={120}>
             <div className="mt-10 space-y-5 text-foreground/75 leading-relaxed text-[17px] max-w-2xl">
               <p>
-                Soy traumatólogo y cirujano ortopédico, especializado en artroscopia de cadera y rodilla. Me formé junto a algunos de los referentes más importantes de Argentina y el exterior, con un objetivo claro: ofrecerte la solución menos invasiva que tu caso permita.
+                Soy traumatólogo y cirujano ortopédico, especializado en artroscopia de cadera y rodilla. Me formé en el hospital de clínicas junto a algunos de los referentes más importantes de Argentina y el exterior, con un objetivo claro: ofrecerte la solución menos invasiva que tu caso permita.
               </p>
               <p>
                 Creo que la cirugía es el último recurso, no el primero. Por eso cada consulta arranca con un diagnóstico minucioso y una conversación honesta sobre todas las alternativas — desde tratamientos regenerativos hasta técnicas mínimamente invasivas.
