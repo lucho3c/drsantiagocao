@@ -2,9 +2,9 @@ import { Reveal } from "./Reveal";
 import { Instagram as IgIcon, Play } from "lucide-react";
 
 const reels = [
-  "https://www.instagram.com/p/DXrinlJj_nT/",
-  "https://www.instagram.com/p/DXcfqSGD8Vn/",
-  "https://www.instagram.com/p/DX-K1grvrlH/",
+  "DXrinlJj_nT",
+  "DXcfqSGD8Vn",
+  "DX-K1grvrlH",
 ];
 
 const Instagram = () => {
@@ -35,38 +35,40 @@ const Instagram = () => {
 
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {reels.map((url, i) => (
-            <Reveal key={url} delay={i * 60}>
-              <a
-                href={url}
-                target="_blank"
-                rel="noreferrer"
-                aria-label={`Ver reel ${i + 1} en Instagram`}
-                className="group relative block w-full overflow-hidden border border-ivory/10 hover:border-gold/60 transition-colors"
+          {reels.map((id, i) => (
+            <Reveal key={id} delay={i * 60}>
+              <div
+                className="group relative w-full overflow-hidden border border-ivory/10 hover:border-gold/60 transition-colors bg-navy-deep"
                 style={{ aspectRatio: "9 / 16" }}
               >
-                <div
-                  className="absolute inset-0 transition-transform duration-700 group-hover:scale-105"
+                {/* Instagram embed iframe — shows the real reel preview */}
+                <iframe
+                  src={`https://www.instagram.com/p/${id}/embed/captioned`}
+                  className="absolute left-1/2 -translate-x-1/2 top-0 pointer-events-none"
                   style={{
-                    background:
-                      "radial-gradient(circle at 30% 20%, hsl(var(--gold) / 0.35), transparent 55%), radial-gradient(circle at 70% 80%, hsl(var(--navy) / 0.9), transparent 60%), linear-gradient(135deg, hsl(var(--navy-deep)), hsl(var(--navy)))",
+                    width: "min(100%, 540px)",
+                    height: "calc(100% + 180px)",
+                    marginTop: "-60px",
+                    border: 0,
                   }}
+                  loading="lazy"
+                  scrolling="no"
+                  allow="encrypted-media"
+                  title={`Reel ${i + 1} de @dr.santiagocao`}
                 />
-                <div className="absolute inset-0 bg-[radial-gradient(hsl(var(--ivory)/0.06)_1px,transparent_1px)] [background-size:14px_14px]" />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-transparent to-transparent" />
-                <div className="absolute top-5 left-5 flex items-center gap-2 text-ivory/80">
-                  <IgIcon size={16} strokeWidth={1.5} />
-                  <span className="text-[10px] tracking-[0.3em] uppercase">Reel</span>
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="flex items-center justify-center w-16 h-16 rounded-full bg-gold/95 text-navy-deep shadow-luxury group-hover:scale-110 transition-transform">
+                {/* Click overlay → opens reel in new tab */}
+                <a
+                  href={`https://www.instagram.com/p/${id}/`}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Ver reel ${i + 1} en Instagram`}
+                  className="absolute inset-0 z-10 flex items-center justify-center bg-navy-deep/10 hover:bg-navy-deep/30 transition-colors"
+                >
+                  <span className="flex items-center justify-center w-16 h-16 rounded-full bg-gold/95 text-navy-deep shadow-luxury opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all">
                     <Play size={26} strokeWidth={2} fill="currentColor" className="ml-1" />
                   </span>
-                </div>
-                <div className="absolute bottom-5 left-5 right-5 text-ivory/85 text-xs tracking-wide">
-                  Ver en Instagram →
-                </div>
-              </a>
+                </a>
+              </div>
             </Reveal>
           ))}
         </div>
