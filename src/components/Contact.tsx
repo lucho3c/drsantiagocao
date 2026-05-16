@@ -4,7 +4,10 @@ import { MapPin, Mail, Phone, MessageCircle } from "lucide-react";
 import { z } from "zod";
 import { toast } from "@/hooks/use-toast";
 
-const WHATSAPP_NUMBER = "5491100000000"; // placeholder
+const WHATSAPP_NUMBER = "5491173608643";
+
+// ⬇️ REEMPLAZAR por tu endpoint de Formspree (formato: https://formspree.io/f/xxxxxxx)
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xdabqqnk";
 
 const schema = z.object({
   name: z.string().trim().min(2, "Ingresá tu nombre").max(100),
@@ -15,19 +18,51 @@ const schema = z.object({
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", area: "", message: "" });
+  const [sending, setSending] = useState(false);
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const r = schema.safeParse(form);
     if (!r.success) {
       toast({ title: "Revisá los datos", description: r.error.issues[0].message, variant: "destructive" });
       return;
     }
-    const text = encodeURIComponent(
-      `Hola Dr. Cao, soy ${form.name} (${form.email}). Zona: ${form.area}. ${form.message}`
-    );
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, "_blank");
-    toast({ title: "Mensaje enviado", description: "Te abrimos WhatsApp para terminar la consulta." });
+
+    setSending(true);
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          nombre: form.name,
+          email: form.email,
+          zona: form.area,
+          mensaje: form.message,
+          _subject: `Nueva consulta web — ${form.name} (${form.area})`,
+        }),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Consulta enviada",
+          description: "Recibimos tu mensaje. Te respondemos a la brevedad.",
+        });
+        setForm({ name: "", email: "", area: "", message: "" });
+      } else {
+        throw new Error("Falló el envío");
+      }
+    } catch (err) {
+      toast({
+        title: "No pudimos enviar la consulta",
+        description: "Probá de nuevo o escribinos directamente por WhatsApp.",
+        variant: "destructive",
+      });
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -69,14 +104,14 @@ const Contact = () => {
                 <Mail className="text-gold mt-1 shrink-0" size={18} strokeWidth={1.5} />
                 <div>
                   <p className="text-foreground/55 text-xs tracking-wide uppercase">Email</p>
-                  <p className="text-navy mt-1">consulta@drsantiagocao.com.ar</p>
+                  <p className="text-navy mt-1">consultas@drsantiagocao.com.ar</p>
                 </div>
               </div>
               <div className="flex items-start gap-4 text-sm">
                 <Phone className="text-gold mt-1 shrink-0" size={18} strokeWidth={1.5} />
                 <div>
                   <p className="text-foreground/55 text-xs tracking-wide uppercase">Teléfono</p>
-                  <p className="text-navy mt-1">+54 9 11 4059 1453</p>
+                  <p className="text-navy mt-1">+54 9 11 7360-8643</p>
                 </div>
               </div>
             </div>
@@ -103,9 +138,10 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              className="w-full sm:w-auto inline-flex items-center justify-center px-10 py-4 bg-navy text-ivory text-[12px] tracking-[0.2em] uppercase hover:bg-gold hover:text-navy-deep transition-colors"
+              disabled={sending}
+              className="w-full sm:w-auto inline-flex items-center justify-center px-10 py-4 bg-navy text-ivory text-[12px] tracking-[0.2em] uppercase hover:bg-gold hover:text-navy-deep transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              Enviar consulta
+              {sending ? "Enviando..." : "Enviar consulta"}
             </button>
           </form>
         </Reveal>

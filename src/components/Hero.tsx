@@ -4,15 +4,25 @@ import areasImg from "@/assets/doctor-portrait.jpg";
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-navy-deep grain">
+      {/* Fondo de huesos: solo en desktop */}
       <img
         src={heroImg}
         alt=""
-        className="absolute inset-0 w-full h-full object-cover opacity-50"
+        className="hidden lg:block absolute inset-0 w-full h-full object-cover opacity-50"
         width={1920}
         height={1080}
       />
+      {/* Fondo del doctor: solo en mobile/tablet */}
+      <img
+        src={areasImg}
+        alt=""
+        aria-hidden="true"
+        className="lg:hidden absolute inset-0 w-full h-full object-cover object-top opacity-40"
+        width={1024}
+        height={1024}
+      />
       <div className="absolute inset-0 bg-gradient-to-r from-navy-deep via-navy-deep/85 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/40 lg:via-transparent to-transparent" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 grid lg:grid-cols-12 gap-12 items-center w-full">
         <div className="lg:col-span-7">

@@ -1,6 +1,6 @@
 const WhatsAppFab = () => (
   <a
-    href="https://web.whatsapp.com/5491140591453"
+    href="https://wa.me/5491173608643"
     target="_blank"
     rel="noreferrer"
     aria-label="Contactar por WhatsApp"
