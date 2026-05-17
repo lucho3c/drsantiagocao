@@ -12,28 +12,50 @@ const Hero = () => {
         width={1920}
         height={1080}
       />
-      {/* Fondo del doctor: solo en mobile/tablet */}
-      <img
-        src={areasImg}
-        alt=""
-        aria-hidden="true"
-        className="lg:hidden absolute inset-0 w-full h-full object-cover object-top opacity-40"
-        width={1024}
-        height={1024}
-      />
-      <div className="absolute inset-0 bg-gradient-to-r from-navy-deep via-navy-deep/85 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/40 lg:via-transparent to-transparent" />
+      <div className="hidden lg:block absolute inset-0 bg-gradient-to-r from-navy-deep via-navy-deep/85 to-transparent" />
+
+      {/* Foto del doctor en mobile: arriba a la derecha, 1/3 del ancho aprox., con
+          un gradiente que protege la zona del texto a la izquierda */}
+      <div className="lg:hidden absolute top-0 right-0 w-[58%] h-[58%] pointer-events-none">
+        <img
+          src={areasImg}
+          alt=""
+          aria-hidden="true"
+          className="w-full h-full object-cover object-top"
+          width={1024}
+          height={1024}
+        />
+        {/* Difuminado contra el fondo (degrade desde la izquierda y desde abajo) */}
+        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-navy-deep/20 to-navy-deep" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/40 to-transparent" />
+      </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 grid lg:grid-cols-12 gap-12 items-center w-full">
         <div className="lg:col-span-7">
           <p className="text-gold text-[11px] tracking-[0.4em] uppercase mb-8 opacity-0 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-            Traumatología · Cirugía Ortopédica
+            <span className="lg:hidden">
+              Traumatología<br />
+              Cirugía<br />
+              Ortopédica
+            </span>
+            <span className="hidden lg:inline">Traumatología · Cirugía Ortopédica</span>
           </p>
           <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] leading-[1.02] text-ivory text-balance opacity-0 animate-fade-up" style={{ animationDelay: "0.25s" }}>
-            Dr. Santiago <em className="text-gold not-italic font-normal">Cao</em>
+            <span className="lg:hidden">
+              Dr.<br />
+              Santiago<br />
+              <em className="text-gold not-italic font-normal">Cao</em>
+            </span>
+            <span className="hidden lg:inline">
+              Dr. Santiago <em className="text-gold not-italic font-normal">Cao</em>
+            </span>
           </h1>
           <p className="mt-8 max-w-xl font-serif text-2xl md:text-3xl text-ivory/80 leading-snug italic opacity-0 animate-fade-up" style={{ animationDelay: "0.45s" }}>
-            Menos cirugía, mejor calidad de vida.
+            <span className="lg:hidden">
+              Menos cirugía,<br />
+              mejor calidad de vida.
+            </span>
+            <span className="hidden lg:inline">Menos cirugía, mejor calidad de vida.</span>
           </p>
           <p className="mt-6 max-w-lg text-ivory/65 leading-relaxed opacity-0 animate-fade-up" style={{ animationDelay: "0.6s" }}>
             Especialista en artroscopia de cadera y rodilla. Un abordaje mínimamente invasivo, pensado para que vuelvas a moverte sin dolor — y sin pasar por el quirófano si no hace falta.
@@ -42,7 +64,7 @@ const Hero = () => {
           <div className="mt-12 flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-up" style={{ animationDelay: "0.75s" }}>
             <a
               href="#contacto"
-              className="inline-flex items-center justify-center px-8 py-4 bg-gold text-navy-deep text-[12px] tracking-[0.2em] uppercase font-medium hover:bg-gold-light transition-colors"
+              className="inline-flex items-center justify-center px-8 py-4 bg-gold text-ivory text-[12px] tracking-[0.2em] uppercase font-medium hover:bg-gold-light transition-colors"
             >
               Consultá tu caso
             </a>
