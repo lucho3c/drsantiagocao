@@ -12,17 +12,23 @@ const Hero = () => {
         width={1920}
         height={1080}
       />
-      {/* Fondo del doctor: solo en mobile/tablet */}
-      <img
-        src={areasImg}
-        alt=""
-        aria-hidden="true"
-        className="lg:hidden absolute inset-0 w-full h-full object-cover object-top opacity-40"
-        width={1024}
-        height={1024}
-      />
-      <div className="absolute inset-0 bg-gradient-to-r from-navy-deep via-navy-deep/85 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/40 lg:via-transparent to-transparent" />
+      <div className="hidden lg:block absolute inset-0 bg-gradient-to-r from-navy-deep via-navy-deep/85 to-transparent" />
+
+      {/* Foto del doctor en mobile: arriba a la derecha, 1/3 del ancho aprox., con
+          un gradiente que protege la zona del texto a la izquierda */}
+      <div className="lg:hidden absolute top-0 right-0 w-[58%] h-[58%] pointer-events-none">
+        <img
+          src={areasImg}
+          alt=""
+          aria-hidden="true"
+          className="w-full h-full object-cover object-top"
+          width={1024}
+          height={1024}
+        />
+        {/* Difuminado contra el fondo (degrade desde la izquierda y desde abajo) */}
+        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-navy-deep/20 to-navy-deep" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/40 to-transparent" />
+      </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 grid lg:grid-cols-12 gap-12 items-center w-full">
         <div className="lg:col-span-7">
