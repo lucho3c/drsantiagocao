@@ -4,7 +4,7 @@ import { MapPin, Mail, Phone, MessageCircle } from "lucide-react";
 import { z } from "zod";
 import { toast } from "@/hooks/use-toast";
 
-const WHATSAPP_NUMBER = "5491173608643";
+const WHATSAPP_NUMBER = "5491140591453";
 
 // ⬇️ REEMPLAZAR por tu endpoint de Formspree (formato: https://formspree.io/f/xxxxxxx)
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/xdabqqnk";
@@ -111,7 +111,7 @@ const Contact = () => {
                 <Phone className="text-gold mt-1 shrink-0" size={18} strokeWidth={1.5} />
                 <div>
                   <p className="text-foreground/55 text-xs tracking-wide uppercase">Teléfono</p>
-                  <p className="text-navy mt-1">+54 9 11 7360-8643</p>
+                  <p className="text-navy mt-1">+54 9 11 4059-1453</p>
                 </div>
               </div>
             </div>
